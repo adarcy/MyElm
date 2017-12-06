@@ -2,11 +2,14 @@ package com.myelm;
 
 import android.app.Application;
 
+import com.cboy.rn.splashscreen.SplashScreenReactPackage;
+import com.cmcewen.blurview.BlurViewPackage;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.oblador.vectoricons.VectorIconsPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -22,7 +25,10 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
+          new MainReactPackage(),
+          new BlurViewPackage(),
+                      new SplashScreenReactPackage(),
+                      new VectorIconsPackage()
       );
     }
 
